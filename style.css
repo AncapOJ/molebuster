@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   background-color: #51A67C;
   border-radius: 10px;
@@ -11,19 +12,26 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
 .header h1 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 4rem;
+  z-index: 1;
 }
 
 body, html {
   background-color: #b2eccf;
 }
 
+main {
+  min-height: 75vh;
+}
+
 .mol {
   margin-top: 2vh;
+  z-index: 1;
 }
 
 .mol_big {
@@ -33,13 +41,74 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
 .mol__div {
   font-size: 3rem;
-  padding: 80px;
   border: 2px solid black;
-  border-radius: 100vw;
-  margin: 2vw;
+  margin: 1.5vw;
+  width: 250px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #a58446;
+  background-position: center;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+  cursor: url(/images/pixlr-bg-result.png), pointer;
+  z-index: 1;
+}
+
+.mol__div:hover {
+  background-image: url(/images/77975983-carácter-sonriente-feliz-lindo-del-topo-.jpg);
+}
+
+.tree {
+  z-index: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  bottom: -30px;
+  right: 0px;
+}
+
+.start {
+  z-index: 1;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.start button {
+  background-color: yellow;
+  height: 60px;
+  border-radius: 40px;
+  font-size: 2rem;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #067c59;
+  z-index: 1;
+}
+
+.footer h3 {
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
