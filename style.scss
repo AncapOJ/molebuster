@@ -1,5 +1,19 @@
-.header {
-    background-color: #51A67C ;
+
+:root{
+    --button-height: 3rem;
+    --color-text: rgba(0,0,0,.25);
+    --color-text-shadow: rgba(255,255,255,.15);
+    --color-page-bg:#B9B5AA;
+    --color-bg:#899095;
+    --color-bg-light:#969DA3;
+    --color-bg-dark: #7D878F;
+    --color-overlay-light: rgba(255,255,255,.2);
+    --color-overlay-medium: rgba(0,0,0,.1);
+    --color-overlay-dark: rgba(0,0,0,.2);
+    --color-tab-focus: rgba(255,255,255,.15);
+}
+
+.header {    
     border-radius: 10px;
     height: 10vh;
     display: flex;
@@ -8,24 +22,42 @@
     z-index: 1;
 
     h1{
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 4rem;
-        z-index: 1;
+        font-size:3rem;
+        font-family: 'Open Sans', sans-serif;
+        color:white;
+        text-shadow: 1px 1px var(--color-text-shadow);
+        
     }
 }
 
 body, html {
-    background-color:  #b2eccf ;
+    background-color:  #000000 ;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
 }
 
 main{
     min-height: 75vh;
+    
+}
+
+.play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 
 .mol {
+    
+    display:inline-block;
+    border-radius: 20px;
     margin-top: 2vh;
     z-index: 1;
+    background-color:  var(--color-bg);
 }
 
 .mol_big{
@@ -37,60 +69,76 @@ main{
     font-size: 3rem;
     border:2px solid black;
     margin: 1.5vw;
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    background-color: rgb(165, 132, 70);
+    background-color: rgb(238, 227, 67);
     
     background-position: center;
     box-shadow: 5px 5px 10px black;
     cursor: url(/images/pixlr-bg-result.png),pointer;
     z-index: 1;
 
-    &:hover {
-        background-image: url(/images/77975983-carácter-sonriente-feliz-lindo-del-topo-.jpg);
-    }
+
+}
+.out{
+    background-image: url(/images/77975983-carácter-sonriente-feliz-lindo-del-topo-.jpg);
 }
 
-.tree {
-    z-index: 0;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: -30px;
-    right: 0px;
-    
-}
 
 .start {
     z-index: 1;
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    button {
-        background-color: yellow;
-        height: 60px;
-        border-radius: 40px;
-        font-size: 2rem;
-        box-shadow: 5px 5px 10px black;
-        cursor: pointer;
-        z-index: 1;
+    .retro {
+       
+        position:relative;
+        appearance:none;
+        box-sizing:border-box;
+        font-size:calc( var(--button-height) / 3 );
+        font-family: 'Open Sans', sans-serif;
+        background: var(--color-bg);
+        height:var(--button-height);
+        min-width:var(--button-height);
+        border-radius:calc( var(--button-height) / 2);
+        border:0;
+        font-weight:800;
+        text-transform:uppercase;
+        color:var(--color-text);
+        text-shadow: 1px 1px var(--color-text-shadow);
+        cursor:pointer;
+        margin:6px 6px;
+        letter-spacing:.1em;
+        transition: all 200ms ease;
+        box-shadow:
+          -1px  -1px 1px var(--color-bg), //top highlight
+          0 0 0 4px var(--color-overlay-medium), //outer shadow
+          1px  1px 1px var(--color-bg-dark), //bottom lowlight
+          inset .0 .0 .0 var(--color-overlay-dark), //inset shadow    
+          inset .5rem .5rem .25rem var(--color-bg-light) //but
     }
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 5px;
 }
 
 .footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(6, 124, 89);
-    z-index: 1;
-
-    h3 {
-        z-index: 1;
-    }
-
+    color: whitesmoke;
+    margin-top: 20px;
+   
 }
 
 
