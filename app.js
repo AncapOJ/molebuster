@@ -8,11 +8,11 @@ function startPlay() {
     
     score.textContent=0;
     
-    const fun = setInterval(play,2*1000);
+    const fun = setInterval(play,1*1000);
     setTimeout(function () {
         clearInterval(fun);
         alert('Tiempo!')
-    }, 20*1000);
+    }, 30*1000);
     
 }
 
@@ -31,7 +31,7 @@ function play (){
     })
     setTimeout(function(){
         circles[number-1].classList.remove('out') ;
-    },1*1000);
+    },.7*1000);
     
 }
 
